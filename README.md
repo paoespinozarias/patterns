@@ -1,2 +1,2 @@
 # patterns
-Smart cities ontology desing patterns
+Smart City Ontology Design Patterns
