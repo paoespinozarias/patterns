@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="time:TemporalEntity#"
+     xml:base="time:TemporalEntity"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://delicias.fi.upm.es/patterns/kpi">
+        <owl:imports rdf:resource="http://delicias.fi.upm.es/patterns/administrative-area#"/>
+        <vann:preferredNamespacePrefix xml:lang="en">odp-kpi</vann:preferredNamespacePrefix>
+        <terms:title xml:lang="en">Key Performance Indicator Ontology Design Pattern</terms:title>
+        <dc:creator xml:lang="en">Paola Espinoza Arias, María Poveda Villalón, Raúl García Castro, Oscar Corcho.</dc:creator>
+        <terms:description xml:lang="en">This pattern represents the measured values, according to a method, in order to monitor the performance of a city (e.g.  noise pollution level, air quality index, recycling rate, etc.)</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:created xml:lang="en">2018-11-22</terms:created>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#aggregates -->
+
+    <owl:ObjectProperty rdf:about="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#aggregates">
+        <rdfs:label xml:lang="en">aggregates</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#assesses -->
+
+    <owl:ObjectProperty rdf:about="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#assesses">
+        <rdfs:comment xml:lang="en">The Key Performance Indicator Value assesses an organization, services, process or product.</rdfs:comment>
+        <rdfs:label xml:lang="en">asseses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#calculatedBy -->
+
+    <owl:ObjectProperty rdf:about="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#calculatedBy">
+        <rdfs:comment xml:lang="en">The Key Performance Indicator Value can be calculated by an organization, or in general way by an agent</rdfs:comment>
+        <rdfs:label xml:lang="en">calculated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#hasIndicatorUnit -->
+
+    <owl:ObjectProperty rdf:about="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#hasIndicatorUnit">
+        <rdfs:label xml:lang="en">has indicator unit</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#implementsKPI -->
+
+    <owl:ObjectProperty rdf:about="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#implementsKPI"/>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#refersToTime -->
+
+    <owl:ObjectProperty rdf:about="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#refersToTime"/>
+    
+
+
+    <!-- time:TemporalEntity#hasCalculationPeriod -->
+
+    <owl:ObjectProperty rdf:about="time:TemporalEntity#hasCalculationPeriod">
+        <rdfs:label xml:lang="en">has calculation period</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- time:TemporalEntity#refersTo -->
+
+    <owl:ObjectProperty rdf:about="time:TemporalEntity#refersTo">
+        <rdfs:label xml:lang="en">refers to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#creationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#creationDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">creation date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#descritpion -->
+
+    <owl:DatatypeProperty rdf:about="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#descritpion">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The Key Performance Indicator description.</rdfs:comment>
+        <rdfs:label xml:lang="en">description</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#expirationDate -->
+
+    <owl:DatatypeProperty rdf:about="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#expirationDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">expiration date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#lastUpdateDate -->
+
+    <owl:DatatypeProperty rdf:about="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#lastUpdateDate">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:label xml:lang="en">last update date</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#name -->
+
+    <owl:DatatypeProperty rdf:about="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#name">
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">The Key Performance Indicartor&apos;s name.</rdfs:comment>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#value -->
+
+    <owl:DatatypeProperty rdf:about="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#value">
+        <rdfs:comment xml:lang="en">The value of the Key Performance Indicator Value.</rdfs:comment>
+        <rdfs:label xml:lang="en">Key Performance Indicator value</rdfs:label>
+        <rdfs:label xml:lang="en">value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#KeyPerfomanceIndicator -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#KeyPerfomanceIndicator">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#descritpion"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A Key Performance Indicator (KPI) is a type of performance measurement. KPIs evaluate the success of an organization or of a particular activity in which it engages</rdfs:comment>
+        <rdfs:label xml:lang="en">Key Performance Indicator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#KeyPerformanceIndicatorValue -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#KeyPerformanceIndicatorValue">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#aggregates"/>
+                <owl:allValuesFrom rdf:resource="time:TemporalEntity#Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#assesses"/>
+                <owl:allValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#calculatedBy"/>
+                <owl:allValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#hasIndicatorUnit"/>
+                <owl:allValuesFrom rdf:resource="time:TemporalEntity#UnitOfMeasurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#implementsKPI"/>
+                <owl:allValuesFrom rdf:resource="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#KeyPerfomanceIndicator"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#refersToTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="time:TemporalEntity#hasCalculationPeriod"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="time:TemporalEntity#refersTo"/>
+                <owl:allValuesFrom rdf:resource="http://delicias.fi.upm.es/patterns/topology#SpatialFeature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#creationDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#expirationDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#lastUpdateDate"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/KeyPerformaceIndicator#value"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Represents the given value which a Key Performance Indicator can take in a given timestamp.</rdfs:comment>
+        <rdfs:label xml:lang="en">Key Performance Indicator Value</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time#"/>
+        <rdfs:label xml:lang="en">Temporal Entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- time:TemporalEntity#Measurement -->
+
+    <owl:Class rdf:about="time:TemporalEntity#Measurement">
+        <rdfs:label xml:lang="en">Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- time:TemporalEntity#UnitOfMeasurement -->
+
+    <owl:Class rdf:about="time:TemporalEntity#UnitOfMeasurement">
+        <rdfs:label xml:lang="en">Unit of Measurement</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

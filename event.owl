@@ -1,0 +1,282 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://delicias.fi.upm.es/patterns/event#"
+     xml:base="http://delicias.fi.upm.es/patterns/event"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:time="http://www.w3.org/2006/time#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://delicias.fi.upm.es/patterns/event">
+        <owl:imports rdf:resource="http://delicias.fi.upm.es/patterns/topology"/>
+        <dc:creator xml:lang="en">Paola Espinoza Arias, María Poveda Villalón, Raúl García Castro, Oscar Corcho.</dc:creator>
+        <terms:description xml:lang="en">This pattern describes activities performed in a city during a specified period of time (e.g. concerts, exhibitions, races, etc.).</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:title xml:lang="en">Event Ontology Design Pattern</terms:title>
+        <vann:preferredNamespacePrefix xml:lang="en">odp-event</vann:preferredNamespacePrefix>
+        <terms:created xml:lang="en">2018-11-22</terms:created>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/event#accesibilityType -->
+
+    <owl:ObjectProperty rdf:about="http://delicias.fi.upm.es/patterns/event#accesibilityType">
+        <rdfs:comment xml:lang="en">An event can have a given accesibility type. The accesibility types can be defined in a skos list.</rdfs:comment>
+        <rdfs:label xml:lang="en">accesibility type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/event#atTime -->
+
+    <owl:ObjectProperty rdf:about="http://delicias.fi.upm.es/patterns/event#atTime">
+        <rdfs:comment xml:lang="en">An event takes place in a particular interval of time.</rdfs:comment>
+        <rdfs:label xml:lang="en">at time</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/event#hasBeggining -->
+
+    <owl:ObjectProperty rdf:about="http://delicias.fi.upm.es/patterns/event#hasBeggining">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#hasTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time#"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/event#isOrganizedBy -->
+
+    <owl:ObjectProperty rdf:about="http://delicias.fi.upm.es/patterns/event#isOrganizedBy">
+        <rdfs:comment xml:lang="en">An event is organized by an agent.</rdfs:comment>
+        <rdfs:label xml:lang="en">is organized by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/event#subEventOf -->
+
+    <owl:ObjectProperty rdf:about="http://delicias.fi.upm.es/patterns/event#subEventOf">
+        <rdfs:comment xml:lang="en">An event can be a sub event of other event.</rdfs:comment>
+        <rdfs:label xml:lang="en">subevent of</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/event#takesPlaceIn -->
+
+    <owl:ObjectProperty rdf:about="http://delicias.fi.upm.es/patterns/event#takesPlaceIn">
+        <rdfs:comment xml:lang="en">An event takes place in a given place.</rdfs:comment>
+        <rdfs:label xml:lang="en">takes place in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasEnd -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasEnd">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#hasTime"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time#"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2006/time#hasTime -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2006/time#hasTime">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time#"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/event#name -->
+
+    <owl:DatatypeProperty rdf:about="http://delicias.fi.upm.es/patterns/event#name">
+        <rdfs:comment xml:lang="en">The name of an entity</rdfs:comment>
+        <rdfs:label xml:lang="en">name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/event#Event -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/event#Event">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/event#takesPlaceIn"/>
+                <owl:someValuesFrom rdf:resource="http://delicias.fi.upm.es/patterns/topology#SpatialFeature"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/event#accesibilityType"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/event#atTime"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/event#isOrganizedBy"/>
+                <owl:allValuesFrom rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/event#subEventOf"/>
+                <owl:allValuesFrom rdf:resource="http://delicias.fi.upm.es/patterns/event#Event"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://delicias.fi.upm.es/patterns/event#name"/>
+                <owl:allValuesFrom rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">An event is something that occurs in a certain place during a particular interval of time.</rdfs:comment>
+        <rdfs:label>Event</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/event#NonConvexInterval -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/event#NonConvexInterval">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#Instant"/>
+        <rdfs:comment xml:lang="en">A non convext interval represents periodic intervals with gaps between them (e.g., “every Wednesday”). It coul be linked to a skos list with concept definitios about time recurrency, such as, daily, weekly, monthly, or annually could be
+defined in order to represent the recurrence of the Event.</rdfs:comment>
+        <rdfs:label xml:lang="en">Non Convex Interval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#Concept -->
+
+    <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+        <rdfs:isDefinedBy rdf:resource="http://delicias.fi.upm.es/patterns/event"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2004/02/skos/core#"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Instant -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment xml:lang="en">A temporal entity with zero extent or duration.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time#"/>
+        <rdfs:label xml:lang="en">Time Instant</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#Interval -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#Interval">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <rdfs:comment xml:lang="en">A temporal entity with an extent or duration</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time#"/>
+        <rdfs:label xml:lang="en">Time Interval</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2006/time#TemporalEntity -->
+
+    <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity">
+        <rdfs:comment xml:lang="en">A temporal interval or instant.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/2006/time#"/>
+        <rdfs:label xml:lang="en">Temporal entity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Agent -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Agent">
+        <rdfs:comment xml:lang="en">An agent (eg. person, group, software or physical artifact).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label xml:lang="en">Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Group -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Group">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">A class of Agents.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label xml:lang="en">Group</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">An organization</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label xml:lang="en">Organization</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person">
+        <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <rdfs:comment xml:lang="en">A person.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <rdfs:label xml:lang="en">Person</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

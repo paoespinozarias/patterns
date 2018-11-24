@@ -1,0 +1,159 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://delicias.fi.upm.es/patterns/city-object#"
+     xml:base="http://delicias.fi.upm.es/patterns/city-object"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://delicias.fi.upm.es/patterns/city-object">
+        <owl:imports rdf:resource="http://delicias.fi.upm.es/patterns/administrative-area#"/>
+        <vann:preferredNamespacePrefix>odp-cityobj</vann:preferredNamespacePrefix>
+        <terms:description xml:lang="en">This patterns represents all objects that can be contained by a city (e.g. devices, buildings, transport means, etc.)</terms:description>
+        <dc:creator>Paola Espinoza Arias, María Poveda Villalón, Raúl García Castro, Oscar Corcho.</dc:creator>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:created>2018-11-22</terms:created>
+        <terms:title xml:lang="en">City Object Ontology Design Pattern</terms:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/administrative-area#AdministrativeArea -->
+
+    <rdf:Description rdf:about="http://delicias.fi.upm.es/patterns/administrative-area#AdministrativeArea">
+        <owl:disjointWith rdf:resource="http://delicias.fi.upm.es/patterns/city-object#CityObject"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/administrative-area#City -->
+
+    <rdf:Description rdf:about="http://delicias.fi.upm.es/patterns/administrative-area#City">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.opengis.net/ont/geosparql#sfContains"/>
+                <owl:someValuesFrom rdf:resource="http://delicias.fi.upm.es/patterns/city-object#CityObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </rdf:Description>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/city-object#Bridge -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/city-object#Bridge">
+        <rdfs:subClassOf rdf:resource="http://delicias.fi.upm.es/patterns/city-object#CityObject"/>
+        <rdfs:label xml:lang="en">Bridge</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/city-object#Building -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/city-object#Building">
+        <rdfs:subClassOf rdf:resource="http://delicias.fi.upm.es/patterns/city-object#CityObject"/>
+        <rdfs:label xml:lang="en">Building</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/city-object#CityFurniture -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/city-object#CityFurniture">
+        <rdfs:subClassOf rdf:resource="http://delicias.fi.upm.es/patterns/city-object#CityObject"/>
+        <rdfs:label xml:lang="en">City Furniture</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/city-object#CityObject -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/city-object#CityObject">
+        <rdfs:subClassOf rdf:resource="http://delicias.fi.upm.es/patterns/topology#SpatialFeature"/>
+        <rdfs:comment xml:lang="en">Describes the objects which belongs to a city.</rdfs:comment>
+        <rdfs:label xml:lang="en">City Object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/city-object#Device -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/city-object#Device">
+        <rdfs:subClassOf rdf:resource="http://delicias.fi.upm.es/patterns/city-object#CityObject"/>
+        <rdfs:label xml:lang="en">Device</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/city-object#DigitalTerrain -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/city-object#DigitalTerrain">
+        <rdfs:subClassOf rdf:resource="http://delicias.fi.upm.es/patterns/city-object#CityObject"/>
+        <rdfs:label xml:lang="en">Digital Terrain</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/city-object#LandUse -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/city-object#LandUse">
+        <rdfs:subClassOf rdf:resource="http://delicias.fi.upm.es/patterns/city-object#CityObject"/>
+        <rdfs:label xml:lang="en">Land Use</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/city-object#Transportation -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/city-object#Transportation">
+        <rdfs:subClassOf rdf:resource="http://delicias.fi.upm.es/patterns/city-object#CityObject"/>
+        <rdfs:label xml:lang="en">Transportation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/city-object#Tunnel -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/city-object#Tunnel">
+        <rdfs:subClassOf rdf:resource="http://delicias.fi.upm.es/patterns/city-object#CityObject"/>
+        <rdfs:label xml:lang="en">Tunnel</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/city-object#Vegetation -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/city-object#Vegetation">
+        <rdfs:subClassOf rdf:resource="http://delicias.fi.upm.es/patterns/city-object#CityObject"/>
+        <rdfs:label xml:lang="en">Vegetation</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://delicias.fi.upm.es/patterns/city-object#WaterBody -->
+
+    <owl:Class rdf:about="http://delicias.fi.upm.es/patterns/city-object#WaterBody">
+        <rdfs:subClassOf rdf:resource="http://delicias.fi.upm.es/patterns/city-object#CityObject"/>
+        <rdfs:label xml:lang="en">Water Body</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
